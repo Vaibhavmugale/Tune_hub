@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneHub-Add Song</title>
+    <link rel="stylesheet" href="css/newSong.css">
+</head>
+<body>
+    <div class="container">
+        <form action="addSong" method="post" class="song-form">
+            <h1>Add a New Song</h1>
+
+            <label for="name">Song Title</label>
+            <input type="text" id="name" name="name" placeholder="Enter the song title" required>
+
+            <label for="artist">Artist</label>
+            <input type="text" id="artist" name="artst" placeholder="Who performed this song?" required>
+
+            <label for="genre">Genre</label>
+            <input type="text" id="genre" name="genre" placeholder="e.g., Pop, Rock, Hip-hop" required>
+
+            <label for="link">Song Link</label>
+            <input type="text" id="link" name="link" placeholder="Paste the song link here" required>
+
+            <input type="submit" value="Add Song">
+        </form>
+    </div>
+</body>
+</html>

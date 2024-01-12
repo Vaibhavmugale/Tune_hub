@@ -1,0 +1,97 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s ease;
+}
+
+body:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.registration-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.registration-form:hover {
+    background-color: #f8f8f8;
+}
+
+.registration-form__title {
+    text-align: center;
+    color: #262626;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.registration-form__form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group__label {
+    display: block;
+    margin-bottom: 8px;
+    color: #262626;
+}
+
+.form-group__input,
+.form-group__textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;
+    background-color: #fafafa;
+    color: #262626;
+    transition: border-color 0.3s ease;
+}
+
+.form-group__input:focus,
+.form-group__textarea:focus {
+    outline: none;
+    border-color: #0095f6;
+}
+
+.radio-group {
+    margin-top: 10px;
+}
+
+.radio-group__input {
+    margin-right: 5px;
+}
+
+.form-group__button {
+    background-color: #0095f6;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.form-group__button:hover {
+    background-color: #0077cc;
+}
+
+/* Add styling for form validation/error messages */
+.error-message {
+    color: #ff0000;
+    margin-top: 5px;
+    font-size: 14px;
+}

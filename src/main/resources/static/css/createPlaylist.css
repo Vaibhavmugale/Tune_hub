@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.container {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #4CAF50;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    color: #ccc;
+    font-size: 18px;
+}
+
+input[type="text"] {
+    width: calc(100% - 16px);
+    padding: 12px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    border-radius: 4px;
+    color: #ddd;
+    ::placeholder { 
+        color: #ccf;
+    }
+}
+
+.song-list {
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.song input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.song label {
+    color: #4CAF50;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}

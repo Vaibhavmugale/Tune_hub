@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Playlist</title>
+<link rel="stylesheet" href="css/displayPlaylist.css">
+</head>
+
+<body>
+	<div class="container">
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Songs</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="plist:${playlist}">
+					<td th:text="${plist.name}" class="centered-text"></td>
+					<td>
+						<ul>
+							<li th:each="song:${plist.songs}"><span
+								th:text="${song.name}"></span> <audio controls
+									class="black-audio-controls">
+									<source th:src="${song.link}" type="audio/mpeg">
+								</audio>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>

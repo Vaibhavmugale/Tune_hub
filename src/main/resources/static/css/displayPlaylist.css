@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('bg1.jpg') center/cover fixed no-repeat; /* Fixed background image */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px; /* Adjust the max-width as needed */
+    margin: 20px auto; /* Centering the container */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Transparent dark black color for the front div */
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    text-align: center; /* Center-align the content within the container */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: auto; /* Make the table scrollable */
+    position: relative;
+    z-index: 2; /* Ensure the table is on top of the front div */
+    margin: auto; /* Center the table within the container */
+}
+
+/* Rest of your existing styles */
+
+thead {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent dark black color for the header row */
+    color: #fff;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black color for all rows */
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.3); /* Transparent black color for even rows */
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+audio {
+    width: 100%;
+}
+
+/* Increase font size and change color for song names */
+li span {
+    color: #ffcc00; /* Adjust color as needed */
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+/* Add this to your existing CSS file */
+.centered-text {
+    text-align: center;
+    font-size: 18px;
+}
+/* Add this to your existing CSS file */
+thead {
+    text-align: center;
+}
+
+th {
+    padding: 15px;
+    text-align: center;
+}
+/* Add this to your existing CSS file */
+.black-audio-controls {
+    width: 80%;
+    color: black;
+}
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="registration-form">
+        <h1 class="registration-form__title">Registration Form</h1>
+        <form action="register" method="post" class="registration-form__form">
+            <div class="form-group">
+                <label for="username" class="form-group__label">Username</label>
+                <input type="text" id="username" name="username" required class="form-group__input">
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-group__label">Email</label>
+                <input type="text" id="email" name="email" required class="form-group__input">
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-group__label">Password</label>
+                <input type="password" id="password" name="password" required class="form-group__input">
+            </div>
+
+            <div class="form-group">
+                <label class="form-group__label">Gender</label>
+                <div class="radio-group">
+                    <input type="radio" name="gender" value="male" id="male" class="radio-group__input">
+                    <label for="male" class="radio-group__label">Male</label>
+
+                    <input type="radio" name="gender" value="female" id="female" class="radio-group__input">
+                    <label for="female" class="radio-group__label">Female</label>
+
+                    <input type="radio" name="gender" value="other" id="other" class="radio-group__input">
+                    <label for="other" class="radio-group__label">Other</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-group__label">Role</label>
+                <div class="radio-group">
+                    <input type="radio" name="role" value="admin" id="admin" class="radio-group__input">
+                    <label for="admin" class="radio-group__label">Admin</label>
+
+                    <input type="radio" name="role" value="customer" id="customer" class="radio-group__input">
+                    <label for="customer" class="radio-group__label">Customer</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="address" class="form-group__label">Address</label>
+                <textarea rows="5" id="address" name="address" class="form-group__textarea"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="form-group__button">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 10px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+th, td {
+    border: none;
+    text-align: center;
+    padding: 12px;
+    color: #fff;
+}
+
+th {
+    background-color: #4CAF50;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+audio {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+td audio {
+    display: block;
+    margin: auto;
+}
+
+.plyr__controls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.plyr__progress--played, .plyr__progress--buffer {
+    background-color: #4CAF50;
+    height: 8px;
+    border-radius: 5px;
+}
+
+.plyr__volume--horizontal {
+    width: 100px;
+}
+
+.plyr__volume--horizontal .plyr__volume--display {
+    width: 40px;
+}
+
+.plyr__volume--horizontal input[type="range"] {
+    background: #4CAF50;
+}
+
+.plyr__time--current,
+.plyr__time--duration {
+    color: #4CAF50;
+    font-size: 0.9em;
+}
+
+.plyr__play-large {
+    font-size: 2.5em;
+    color: black;
+}

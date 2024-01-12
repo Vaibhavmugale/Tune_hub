@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login in to TuneHub</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}" />
+</head>
+<body>
+    <form action="validate" method="post" class="container">
+        <h2>Please Login Here</h2>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+        <br>
+
+        <input type="submit" value="Login" />
+    </form>
+</body>
+</html>
