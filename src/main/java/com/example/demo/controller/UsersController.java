@@ -1,12 +1,17 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 //import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.entities.Song;
 import com.example.demo.entities.Users;
+import com.example.demo.services.SongService;
 import com.example.demo.services.UsersService;
 
 import jakarta.servlet.http.HttpSession;
@@ -31,6 +36,9 @@ public class UsersController {
 	@Autowired
 	UsersService service;
 	
+	@Autowired
+	SongService Songservice;
+	
 	@PostMapping("/register")
 		public String addUser(@ModelAttribute Users user) {
 //		System.out.println(user.getUsername()+" "+user.getEmail()+" "+user.getPassword()+" "+user.getGender()+" "+user.getRole()+" "+user.getAddress());
@@ -42,10 +50,11 @@ public class UsersController {
 		}
 		return "login";
 	}
+	
 	@PostMapping("/validate")
 	public String validate(@RequestParam("email") String email,
 			@RequestParam ("password") String password,
-			HttpSession session) {
+			HttpSession session,Model model) {
 		
 		if(service.validateUsers(email,password)==true) {
 			String role=service.getRole(email);
@@ -53,7 +62,13 @@ public class UsersController {
 			if(role.equals("admin")) {
 				return "adminHome";
 			}else {
-			return "customerHome";
+				Users user=service.getUser(email);
+				boolean userStatus=user.isPremium();
+				List<Song> songList=Songservice.fetchAllSongs();
+				model.addAttribute("songs",songList);
+				model.addAttribute("isPremium",userStatus);
+				 
+				return "customerHome";
 			}
 		}else {
 			return "login";
